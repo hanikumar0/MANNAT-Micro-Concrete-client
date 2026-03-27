@@ -63,7 +63,7 @@ const EnquiryForm = ({ onSuccess }) => {
             const responseData = await response.json();
 
             // Generate WhatsApp Message
-            const waMessage = `Hi Mannat, I'm ${data.name} from ${data.city}. I'm interested in ${data.service}. My Project Area is ${data.area || 'N/A'} sq ft. Message: ${data.message}`;
+            const waMessage = `Hi Mannat, I'm ${data.name} from ${data.city}. My Mobile: ${data.mobile}. I'm interested in ${data.service}. My Project Area: ${data.area || 'N/A'} sq ft. Message: ${data.message}`;
             const waLink = `https://wa.me/919540490459?text=${encodeURIComponent(waMessage)}`;
 
             setTimeout(() => {
