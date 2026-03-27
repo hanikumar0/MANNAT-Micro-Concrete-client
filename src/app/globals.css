@@ -97,16 +97,3 @@ body {
 .main-content {
   will-change: transform, opacity;
 }
-
-@media (hover: hover) and (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
-
-  a,
-  button,
-  [role="button"],
-  select {
-    cursor: none !important;
-  }
-}

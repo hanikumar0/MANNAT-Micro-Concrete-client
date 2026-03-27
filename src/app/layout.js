@@ -4,7 +4,7 @@ import { TrackingProvider } from "@/components/providers/TrackingProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import LayoutHandler from "@/components/layout/LayoutHandler";
-import LuxuryCursor from "@/components/ui/LuxuryCursor";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -148,7 +148,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <TrackingProvider>
             <SmoothScroll>
-              <LuxuryCursor />
+
               <LayoutHandler>
                 {children}
               </LayoutHandler>

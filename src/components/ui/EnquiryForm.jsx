@@ -29,6 +29,10 @@ const EnquiryForm = ({ onSuccess }) => {
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         try {
+            // Read Cookie Consent for Audit Trail
+            const consentStr = typeof window !== 'undefined' ? localStorage.getItem('cookieConsent') : null;
+            const consentData = consentStr ? JSON.parse(consentStr) : null;
+
             const formData = {
                 name: data.name,
                 mobile: data.mobile,
@@ -37,7 +41,9 @@ const EnquiryForm = ({ onSuccess }) => {
                 serviceNeeded: data.service,
                 areaSqFt: data.area || null,
                 message: data.message,
-                budgetRange: data.budget || null
+                budgetRange: data.budget || null,
+                consentStatus: consentData?.status || 'Not Specified',
+                consentTimestamp: consentData?.timestamp || null
             };
 
             const response = await fetch(API_ROUTES.LEADS, {
