@@ -16,6 +16,7 @@ const ColorPaletteTool = dynamic(() => import('@/components/ui/ColorPaletteTool'
 const FAQSection = dynamic(() => import('@/components/ui/FAQSection'));
 const CTABand = dynamic(() => import('@/components/home/CTABand'));
 const InstagramReels = dynamic(() => import('@/components/ui/InstagramReels'));
+const ServiceContentBlock = dynamic(() => import('@/components/ui/ServiceContentBlock'));
 
 const homeFAQs = [
     {
@@ -97,33 +98,34 @@ export default function HomeClient() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: 'Microcement Flooring', desc: 'Monolithic seamless floors for high-traffic zones.', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c', slug: 'microcement-flooring' },
-                            { title: 'Microcement Walls', desc: 'Sculptural, joint-free walls with artistic textures.', image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8', slug: 'microcement-walls' },
+                            { title: 'Microcement Flooring', desc: 'Monolithic seamless floors for high-traffic zones.', image: '/images/bright_floor.png', slug: 'microcement-flooring' },
+                            { title: 'Microcement Walls', desc: 'Sculptural, joint-free walls with artistic textures.', image: '/images/bright_walls.png', slug: 'microcement-walls' },
                             { title: 'Venetian Lime Plaster', desc: 'Classic Italian marble-like depth and high sheen.', image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8', slug: 'venetian-plaster' },
-                            { title: 'Epoxy Coatings', desc: 'Industrial strength meets architectural aesthetics.', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158', slug: 'epoxy-coatings' },
+                            { title: 'Epoxy Coatings', desc: 'Industrial strength meets architectural aesthetics.', image: '/images/epoxy_metallic.png', slug: 'epoxy-coatings' },
                         ].map((service, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                viewport={{ once: true }}
-                                className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl"
-                            >
-                                <Image
-                                    src={`${service.image}?auto=format&fit=crop&q=60&w=800`}
-                                    alt={service.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                                    <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-2">{service.title}</h3>
-                                    <Link href={`/services/${service.slug}`} className="text-[#d4af37] text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                                        Explore <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
-                                    </Link>
-                                </div>
-                            </motion.div>
+                            <Link key={i} href={`/services/${service.slug}`} className="block group">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl cursor-pointer"
+                                >
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        className="object-cover group-hover:scale-110 transition-all duration-1000"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                                        <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-2">{service.title}</h3>
+                                        <div className="text-[#d4af37] text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
+                                            Explore <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
 
@@ -133,32 +135,66 @@ export default function HomeClient() {
                             { title: 'Luxury Wetrooms', desc: 'Joint-free waterproof bathroom solutions.', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14', slug: 'luxury-wetrooms' },
                             { title: 'Bespoke Furniture', desc: 'Seamlessly coated tables and counters.', image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea', slug: 'bespoke-furniture' },
                         ].map((service, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: (i + 4) * 0.1 }}
-                                viewport={{ once: true }}
-                                className="group relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl"
-                            >
-                                <Image
-                                    src={`${service.image}?auto=format&fit=crop&q=60&w=1200`}
-                                    alt={service.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                                    <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-2">{service.title}</h3>
-                                    <Link href={`/services/${service.slug}`} className="text-[#d4af37] text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                                        Explore <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
-                                    </Link>
-                                </div>
-                            </motion.div>
+                            <Link key={i} href={`/services/${service.slug}`} className="block group">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: (i + 4) * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl cursor-pointer"
+                                >
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-110 transition-all duration-1000"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                                        <h3 className="text-white text-xl font-bold uppercase tracking-tight mb-2">{service.title}</h3>
+                                        <div className="text-[#d4af37] text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
+                                            Explore <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
+
+            {/* Content Highlight: What is Microconcrete */}
+            <ServiceContentBlock 
+                title="What is Micro Concrete"
+                subtitle="MICROCONCRETE INDIA"
+                image={["/images/flooring_bright.png", "/images/bright_floor.png", "/images/furniture_bright.png"]}
+                content={[
+                    "Micro concrete is made up of cement, water-based resin, additives, mineral pigments and polymers and can be applied on both horizontal and vertical surfaces to achieve a desired and decorative finish. It can be used to refurbish homes or even commercial properties like resorts, restaurants, hotels, factories, industrial buildings and wet areas as well.",
+                    "Due to its wide range of applications, Micro concrete India becomes a versatile and ideal option for anyone looking to achieve a classic or contemporary look both indoors and outdoors. The micro concrete mixture when applied acts as a protective coating that ensures the durability of any surface it becomes a part of.",
+                    "Micro concrete is a fantastic material due to its versatility, durability, and design flexibility. Whether you're looking to add a sleek, modern touch to your floors, walls or furniture, or create a unique and artistic design, micro concrete is a great choice. So if you're looking for a material that is both functional and stylish, consider micro concrete for your next design project!"
+                ]}
+            />
+
+            <ServiceContentBlock 
+                title="Seamless Continuity"
+                subtitle="ARCHITECTURAL FINISHES"
+                image={["/images/venetian_bright.png", "/images/bright_walls.png", "/images/limewash_bright.png"]}
+                reverse={true}
+                content={[
+                    "Our Venetian Plaster and Lime Wash finishes offer a natural, breathable alternative to traditional paints. Made from aged Italian lime and crushed marble, these finishes develop a beautiful patina over time, adding soul and depth to any architectural space.",
+                    "Ideal for luxury residential projects and high-end retail, our artisanal coatings are hand-applied to ensure that no two surfaces are ever the same. Each wall becomes a unique piece of art, reflecting light and shadow in a way that synthetic materials simply cannot replicate."
+                ]}
+            />
+
+            <ServiceContentBlock 
+                title="Industrial Resilience"
+                subtitle="EPOXY & TERRAZZO"
+                image={["/images/terrazzo_bright.png", "/images/epoxy_bright.png", "/images/wetroom_bright.png"]}
+                content={[
+                    "For high-traffic zones that require extreme durability without sacrificing beauty, our Epoxy and Terrazzo systems are the gold standard. These seamless solutions are impact-resistant, chemical-proof, and designed to last for decades.",
+                    "Whether it's a luxury garage, a commercial gallery, or a modern kitchen, our industrial-grade coatings provide a monolithic canvas that is as tough as it is beautiful."
+                ]}
+            />
 
             {/* Section 3: Featured Real Projects */}
             <ProjectsGallery />

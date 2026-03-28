@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Menu, X, ArrowRight, Phone, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navLinks = [
     { name: 'Services', href: '/services' },
@@ -113,9 +112,7 @@ const Navbar = () => {
                             ))}
                         </div>
 
-                        <div className="hidden lg:block">
-                            <ThemeToggle />
-                        </div>
+                        {/* Enquire Button */}
 
                         <Link
                             href="/enquiry"
@@ -168,7 +165,6 @@ const Navbar = () => {
                                         <div className="w-8 h-px bg-[#d4af37]" />
                                         <span className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.4em]">Project Index 01-07</span>
                                     </div>
-                                    <ThemeToggle />
                                 </div>
 
                                 {navLinks.map((link, i) => (

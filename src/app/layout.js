@@ -110,7 +110,7 @@ const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         {gtmId && (
@@ -132,7 +132,7 @@ export default function RootLayout({ children }) {
           suppressHydrationWarning
         />
       </head>
-      <body className={`${inter.className} bg-white dark:bg-black text-black dark:text-white antialiased transition-colors duration-500 noise-overlay`}>
+      <body className={`${inter.className} bg-white text-black antialiased transition-colors duration-500 noise-overlay`}>
         {/* Google Tag Manager (noscript) */}
         {gtmId && (
           <noscript>
@@ -145,16 +145,13 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         {/* End Google Tag Manager (noscript) */}
-        <ThemeProvider>
-          <TrackingProvider>
-            <SmoothScroll>
-
-              <LayoutHandler>
-                {children}
-              </LayoutHandler>
-            </SmoothScroll>
-          </TrackingProvider>
-        </ThemeProvider>
+        <TrackingProvider>
+          <SmoothScroll>
+            <LayoutHandler>
+              {children}
+            </LayoutHandler>
+          </SmoothScroll>
+        </TrackingProvider>
       </body>
     </html>
   );

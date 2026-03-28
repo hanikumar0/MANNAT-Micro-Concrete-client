@@ -15,15 +15,15 @@ const serviceData = {
         desc: "Premium Italian lime plasters with depth, sheen, and hand-applied artisan textures.",
     },
     'epoxy-coatings': {
-        title: "Epoxy Technical Coating",
+        title: "Epoxy",
         desc: "Industrial-grade durability with high-end retail and residential aesthetics.",
     },
     'lime-wash': {
-        title: "Luxury Lime Wash",
+        title: "Lime Wash",
         desc: "Organic, mineral-based matte finishes for a soft, breathable wall patina.",
     },
     'luxury-wetrooms': {
-        title: "Luxury Wetrooms",
+        title: "Wetrooms & Bathrooms",
         desc: "Seamless, waterproof bathroom transformations without grout lines.",
     },
     'bespoke-furniture': {
@@ -31,8 +31,12 @@ const serviceData = {
         desc: "Hand-applied mineral coatings for furniture, desks, and sculptural elements.",
     },
     'terrazzo': {
-        title: "Venetian Terrazzo",
+        title: "Terrazzo",
         desc: "Timeless marble aggregate flooring with a polished, seamless finish.",
+    },
+    'countertops-stairs': {
+        title: "Countertops & Stairs",
+        desc: "Custom seamless coatings for furniture and structural elements.",
     },
 };
 
