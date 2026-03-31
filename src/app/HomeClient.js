@@ -43,32 +43,33 @@ const homeFAQs = [
 const EnquiryForm = dynamic(() => import('@/components/ui/EnquiryForm'));
 const BeforeAfter = dynamic(() => import('@/components/ui/BeforeAfter'));
 
+const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mannat Micro Concrete",
+    "image": "https://lh3.googleusercontent.com/d/1rjha7IkwcHFlzTSeQdw5ojgRqCJouQCI",
+    "url": "https://www.mannatmicroconcrete.site",
+    "telephone": "+919540490459",
+    "email": "mannatmicroconcrete6@gmail.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "B II -924 Madanpur khadar extn",
+        "addressLocality": "New Delhi",
+        "postalCode": "110076",
+        "addressCountry": "IN"
+    },
+    "description": "Premium industrial-grade microcement and venetian plaster surface finishes for architectural projects across India.",
+    "areaServed": ["New Delhi", "Mumbai", "Bangalore", "Hyderabad", "Pune", "Chennai", "Ahmedabad"],
+    "priceRange": "$$$",
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+    }
+};
+
 export default function HomeClient() {
-    const businessSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Mannat Micro Concrete",
-        "image": "https://lh3.googleusercontent.com/d/1rjha7IkwcHFlzTSeQdw5ojgRqCJouQCI",
-        "url": "https://mannatmicroconcrete.com",
-        "telephone": "+919540490459",
-        "email": "mannatmicroconcrete6@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "B II -924 Madanpur khadar extn",
-            "addressLocality": "New Delhi",
-            "postalCode": "110076",
-            "addressCountry": "IN"
-        },
-        "description": "Premium industrial-grade microcement and venetian plaster surface finishes for architectural projects.",
-        "areaServed": ["New Delhi", "Gurgaon", "Mumbai", "Bangalore", "Noida"],
-        "priceRange": "$$$",
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "09:00",
-            "closes": "20:00"
-        }
-    };
 
     return (
         <div className="bg-white">

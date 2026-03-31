@@ -24,9 +24,10 @@ const EnquiryForm = ({ onSuccess }) => {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: zodResolver(formSchema),
+        mode: 'onBlur', // Optimization: reduce re-renders during typing
     });
 
-    const onSubmit = async (data) => {
+    const onSubmit = React.useCallback(async (data) => {
         setIsSubmitting(true);
         try {
             // Read Cookie Consent for Audit Trail
@@ -93,7 +94,7 @@ const EnquiryForm = ({ onSuccess }) => {
                 alert(`Error submitting form: ${error.message}`);
             }
         }
-    };
+    }, [reset, onSuccess]);
 
     if (isSuccess) {
         return (
