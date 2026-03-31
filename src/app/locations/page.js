@@ -7,7 +7,7 @@ const cities = [
     { name: "Delhi & NCR", slug: "delhi", code: "DEL", desc: "Our primary studio and manufacturing hub." },
     { name: "Mumbai", slug: "mumbai", code: "BOM", desc: "Serving luxury high-rises and coastal residences." },
     { name: "Bangalore", slug: "bangalore", code: "BLR", desc: "Architectural monolithic projects in the tech hub." },
-    { name: "Dubai", slug: "dubai", code: "DXB", desc: "International luxury finishes for high-end properties." },
+    { name: "Hyderabad", slug: "hyderabad", code: "HYD", desc: "Premium architectural floorings for the City of Pearls." },
 ];
 
 const LocationsPage = () => {

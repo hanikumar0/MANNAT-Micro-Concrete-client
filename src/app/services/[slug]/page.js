@@ -71,9 +71,9 @@ export default async function Page({ params }) {
         "provider": {
             "@type": "LocalBusiness",
             "name": "Mannat Micro Concrete",
-            "url": "https://mannatmicroconcrete.com"
+            "url": "https://www.mannatmicroconcrete.site"
         },
-        "areaServed": ["New Delhi", "Mumbai", "Bangalore", "Dubai"],
+        "areaServed": ["New Delhi", "Mumbai", "Bangalore", "Hyderabad"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Luxury Surface Finishes",

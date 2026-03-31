@@ -3,7 +3,7 @@ import AboutClient from './AboutClient';
 
 export const metadata = {
     title: "Our Craftsmen & Philosophy | Mannat Micro Concrete",
-    description: "Discover the story behind Mannat's seamless surfaces. Our team of expert artisans brings Italian craftsmanship to the most prestigious homes in India and Dubai.",
+    description: "Discover the story behind Mannat's seamless surfaces. Our team of expert artisans brings Italian craftsmanship to the most prestigious homes across India.",
     keywords: [
         "Artisan Surface Craftsmen",
         "Mannat Micro Concrete Legacy",

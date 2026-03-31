@@ -3,7 +3,7 @@ import ServicesClient from './ServicesClient';
 
 export const metadata = {
     title: "Luxury Surface Services | Microcement, Venetian Plaster & Epoxy",
-    description: "Our bespoke architectural finishes are designed by artisans for the modern minimalist. From waterproof bathroom microcement to polished lime plasters in Mumbai, Delhi and Dubai.",
+    description: "Our bespoke architectural finishes are designed by artisans for the modern minimalist. From waterproof bathroom microcement to polished lime plasters in Mumbai, Delhi and Hyderabad.",
     keywords: [
         "Microcement Flooring India",
         "Venetian Plaster Walls",

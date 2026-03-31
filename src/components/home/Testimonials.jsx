@@ -13,7 +13,7 @@ const testimonials = [
     },
     {
         name: "Sarah Hussain",
-        role: "Home Owner, Dubai Hills",
+        role: "Home Owner, Malabar Hill, Mumbai",
         text: "Minimalist, durable, and absolutely stunning. We chose the satin finish for our flooring and it feels incredible underfoot. Perfection in every sq.ft.",
         rating: 5
     },
