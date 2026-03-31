@@ -66,21 +66,20 @@ body {
 
 /* Custom Scrollbar Refinement */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: #f8f8f8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
-  border-radius: 0px;
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  background: #d4af37;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #b8960b;
 }
 
 /* Performance & Smoothness */

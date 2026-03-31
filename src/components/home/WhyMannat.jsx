@@ -29,18 +29,18 @@ const reasons = [
 
 const WhyMannat = () => {
     return (
-        <section className="py-32 px-6 bg-zinc-50 dark:bg-[#080808] transition-colors duration-500">
+        <section className="py-16 md:py-24 px-6 bg-zinc-50">
             <div className="max-w-[1600px] mx-auto">
                 <Reveal width="100%">
-                    <div className="text-center mb-24 w-full">
+                    <div className="text-center mb-10 w-full">
                         <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.4em]">The Mannat Edge</span>
-                        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black dark:text-white mt-6 uppercase leading-[0.9]">
-                            Luxury <span className="text-black/30 dark:text-white/30">Value.</span>
+                        <h2 className="text-3xl md:text-6xl font-bold tracking-tighter text-black mt-4 uppercase leading-[0.9]">
+                            Luxury <span className="text-black/25">Value.</span>
                         </h2>
                     </div>
                 </Reveal>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-32">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                     {[
                         { label: 'Total Projects', value: '50+' },
                         { label: 'Technical Warranty', value: '2YR' },
@@ -54,10 +54,10 @@ const WhyMannat = () => {
                             transition={{ delay: i * 0.1 }}
                             className="bg-transparent text-center group"
                         >
-                            <h3 className="text-6xl md:text-8xl font-black text-black dark:text-white/10 group-hover:text-[#d4af37] transition-all duration-700 tracking-tighter mb-4">
+                            <h3 className="text-4xl md:text-7xl font-black text-black group-hover:text-[#d4af37] transition-all duration-700 tracking-tighter mb-4">
                                 {stat.value}
                             </h3>
-                            <p className="text-[10px] uppercase tracking-[0.5em] font-black text-black/40 dark:text-white/30">
+                            <p className="text-[10px] uppercase tracking-[0.5em] font-black text-black/40">
                                 {stat.label}
                             </p>
                         </motion.div>
@@ -72,13 +72,13 @@ const WhyMannat = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1, duration: 1 }}
                             viewport={{ once: true }}
-                            className="p-16 rounded-[4rem] glass border border-black/5 dark:border-white/5 shadow-2xl hover:border-[#d4af37]/30 transition-all duration-700 group hover:-translate-y-4"
+                            className="p-8 rounded-2xl bg-white border border-black/5 shadow-md hover:border-[#d4af37]/30 transition-all duration-700 group hover:-translate-y-1"
                         >
-                            <div className="w-20 h-20 bg-[#d4af37]/5 rounded-[2rem] flex items-center justify-center text-[#d4af37] mb-12 group-hover:bg-[#d4af37] group-hover:text-black transition-all duration-700 group-hover:rotate-[15deg]">
-                                <reason.icon size={40} strokeWidth={1} />
+                            <div className="w-12 h-12 bg-[#d4af37]/10 rounded-xl flex items-center justify-center text-[#d4af37] mb-6 group-hover:bg-[#d4af37] group-hover:text-black transition-all duration-700">
+                                <reason.icon size={24} strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-6 tracking-tighter uppercase text-black dark:text-white transition-colors">{reason.title}</h3>
-                            <p className="text-black/40 dark:text-white/40 font-light leading-relaxed text-[11px] uppercase tracking-widest">
+                            <h3 className="text-xl font-bold mb-3 tracking-tighter uppercase text-black">{reason.title}</h3>
+                            <p className="text-black/40 font-light leading-relaxed text-xs uppercase tracking-widest">
                                 {reason.desc}
                             </p>
                         </motion.div>

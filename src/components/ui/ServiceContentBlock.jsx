@@ -24,7 +24,7 @@ const ServiceContentBlock = ({
     }, [images.length]);
 
     return (
-        <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-20 py-20 px-6 max-w-[1600px] mx-auto ${reverse ? 'lg:flex-row-reverse' : ''}`}>
+        <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 py-14 px-6 max-w-[1600px] mx-auto ${reverse ? 'lg:flex-row-reverse' : ''}`}>
             {/* Image Side: Automatic Slider */}
             <motion.div 
                 initial={{ opacity: 0, x: reverse ? 50 : -50 }}

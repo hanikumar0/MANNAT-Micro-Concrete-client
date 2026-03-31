@@ -71,7 +71,7 @@ export default function HomeClient() {
     };
 
     return (
-        <div className="bg-white dark:bg-black transition-colors duration-500">
+        <div className="bg-white">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
@@ -79,18 +79,18 @@ export default function HomeClient() {
             <Hero />
 
             {/* Section 2: Services (7 cards) */}
-            <section className="py-32 px-6 bg-zinc-50 dark:bg-[#050505] transition-colors duration-500 overflow-hidden">
+            <section className="py-16 md:py-24 px-6 bg-zinc-50 overflow-hidden">
                 <div className="max-w-[1600px] mx-auto">
                     <Reveal width="100%">
-                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-10 mb-24 w-full text-center md:text-left">
+                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-12 md:mb-16 w-full text-center md:text-left">
                             <div>
                                 <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.4em]">Our Expertise</span>
-                                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black dark:text-white mt-6 uppercase leading-[0.9]">
+                                <h2 className="text-3xl md:text-6xl font-bold tracking-tighter text-black mt-4 uppercase leading-[0.9]">
                                     Architectural <br />
-                                    <span className="text-black/30 dark:text-white/30">Continuity.</span>
+                                    <span className="text-black/25">Continuity.</span>
                                 </h2>
                             </div>
-                            <Link href="/services" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2 mt-4 md:mt-0">
+                            <Link href="/services" className="text-black/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/10 pb-2 mt-4 md:mt-0">
                                 All Finishes <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
@@ -109,7 +109,7 @@ export default function HomeClient() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl cursor-pointer"
+                                    className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-black/5 shadow-lg cursor-pointer"
                                 >
                                     <Image
                                         src={service.image}
@@ -141,7 +141,7 @@ export default function HomeClient() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: (i + 4) * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl cursor-pointer"
+                                    className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-black/5 shadow-lg cursor-pointer"
                                 >
                                     <Image
                                         src={service.image}
@@ -215,18 +215,18 @@ export default function HomeClient() {
             <ColorPaletteTool />
 
             {/* Section 8: Process Preview (5 steps) */}
-            <section className="py-32 px-6 bg-zinc-50 dark:bg-[#050505] transition-colors duration-500 overflow-hidden">
+            <section className="py-16 md:py-24 px-6 bg-zinc-50 overflow-hidden">
                 <div className="max-w-[1600px] mx-auto">
                     <Reveal width="100%">
-                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-10 mb-24 w-full text-center md:text-left">
+                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-12 md:mb-16 w-full text-center md:text-left">
                             <div>
                                 <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.4em]">Full Method</span>
-                                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black dark:text-white mt-6 uppercase leading-[0.9]">
+                                <h2 className="text-3xl md:text-6xl font-bold tracking-tighter text-black mt-4 uppercase leading-[0.9]">
                                     Architectural <br />
-                                    <span className="text-black/30 dark:text-white/30">Precision.</span>
+                                    <span className="text-black/25">Precision.</span>
                                 </h2>
                             </div>
-                            <Link href="/process" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2 mt-4 md:mt-0">
+                            <Link href="/process" className="text-black/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/10 pb-2 mt-4 md:mt-0">
                                 Full Methodology <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
@@ -241,10 +241,10 @@ export default function HomeClient() {
                             { step: '05', title: 'Sealing', desc: 'Protective finishing & handover.' },
                         ].map((item, i) => (
                             <Reveal key={i} delay={i * 0.1}>
-                                <div className="group cursor-default p-8 bg-white dark:bg-zinc-900 rounded-[2.5rem] border border-black/5 dark:border-white/5 shadow-xl">
-                                    <span className="text-5xl font-black text-black/5 dark:text-[#d4af37]/10 transition-colors duration-700 group-hover:text-[#d4af37]/20">{item.step}</span>
-                                    <h4 className="text-lg font-bold mt-6 mb-4 tracking-tight uppercase text-black dark:text-white">{item.title}</h4>
-                                    <p className="text-black/40 dark:text-white/40 text-[10px] uppercase font-bold tracking-widest leading-relaxed">{item.desc}</p>
+                                <div className="group cursor-default p-6 bg-white rounded-2xl border border-black/5 shadow-md">
+                                    <span className="text-5xl font-black text-black/5 transition-colors duration-700 group-hover:text-[#d4af37]/20">{item.step}</span>
+                                    <h4 className="text-lg font-bold mt-6 mb-4 tracking-tight uppercase text-black">{item.title}</h4>
+                                    <p className="text-black/40 text-[10px] uppercase font-bold tracking-widest leading-relaxed">{item.desc}</p>
                                 </div>
                             </Reveal>
                         ))}

@@ -68,27 +68,27 @@ const ProjectsGallery = () => {
     const selectedProject = projects.find(p => p.id === selectedId);
 
     return (
-        <section className="py-32 px-6 bg-white dark:bg-black overflow-hidden" id="projects">
+        <section className="py-16 md:py-24 px-6 bg-white overflow-hidden" id="projects">
             <div className="max-w-[1600px] mx-auto">
                 <Reveal width="100%">
-                    <div className="text-center mb-12 w-full">
-                        <span className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.4em] mb-4 block">Execution Excellence</span>
-                        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.85] mb-8">
+                    <div className="text-center mb-8 w-full">
+                        <span className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.4em] mb-3 block">Execution Excellence</span>
+                        <h2 className="text-3xl md:text-6xl font-bold tracking-tighter uppercase leading-[0.85] mb-6">
                             Our Finished <br />
-                            <span className="text-black/30 dark:text-white/30">Masterpieces.</span>
+                            <span className="text-black/25">Masterpieces.</span>
                         </h2>
                     </div>
                 </Reveal>
 
                 {/* Filter Bar */}
-                <div className="flex flex-wrap justify-center gap-4 mb-20">
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
-                            className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${activeCategory === cat
-                                ? "bg-black text-white dark:bg-white dark:text-black border-transparent"
-                                : "bg-transparent text-black/40 dark:text-white/40 border-black/10 dark:border-white/10 hover:border-[#d4af37] hover:text-[#d4af37]"
+                            className={`px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 border ${activeCategory === cat
+                                ? "bg-black text-white border-transparent"
+                                : "bg-transparent text-black/40 border-black/10 hover:border-[#d4af37] hover:text-[#d4af37]"
                                 }`}
                         >
                             {cat}
@@ -98,7 +98,7 @@ const ProjectsGallery = () => {
 
                 <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     <AnimatePresence mode="popLayout">
                         {filteredProjects.map((project, i) => (

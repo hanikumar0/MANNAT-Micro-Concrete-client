@@ -4,23 +4,15 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState('dark');
-    const [mounted, setMounted] = useState(false);
+    const [theme, setTheme] = useState('light');
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem('mannat_theme') || 'dark';
-        setTheme(savedTheme);
-        setMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (!mounted) return;
-
+        // Always force light mode — remove any old dark preference
         const root = document.documentElement;
-        root.classList.remove('light', 'dark');
-        root.classList.add(theme);
-        localStorage.setItem('mannat_theme', theme);
-    }, [theme, mounted]);
+        root.classList.remove('dark');
+        root.classList.add('light');
+        localStorage.removeItem('mannat_theme');
+    }, []);
 
     const toggleTheme = () => {
         setTheme(prev => prev === 'dark' ? 'light' : 'dark');
