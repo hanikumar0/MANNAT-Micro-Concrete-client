@@ -11,8 +11,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://www.mannatmicroconcrete.site"),
   title: "Mannat Micro Concrete | Luxury Finishes. Zero Joints.",
-  description: "Premium Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces across India. Starting from ₹100/sq.ft.",
-  keywords: ["Microcement", "Venetian Plaster", "Epoxy Flooring", "Luxury Interiors", "Mannat Micro Concrete", "Seamless Surfaces", "Interior Design India"],
+  description: "Premium Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces across the entire country (Pan-India). Starting from ₹100/sq.ft.",
+  keywords: [
+    "Microcement India", 
+    "Venetian Plaster New Delhi", 
+    "Epoxy Flooring Mumbai", 
+    "Luxury Interior Finishes", 
+    "Mannat Micro Concrete", 
+    "Seamless Wall Surfaces", 
+    "Architectural Finishes India",
+    "Modern Wall Texture Design",
+    "Polished Concrete Look Flooring",
+    "Waterproof Toilet Microcement",
+    "Lime Wash Walls India",
+    "Interior Renovation Delhi NCR",
+    "Luxury Home Decor Mumbai"
+  ],
   authors: [{ name: "Mannat Micro Concrete" }],
   openGraph: {
     title: "Mannat Micro Concrete | Luxury Finishes. Zero Joints.",
@@ -60,7 +74,7 @@ const jsonLd = {
   "name": "Mannat Micro Concrete",
   "image": "https://www.mannatmicroconcrete.site/logo.png",
   "logo": "https://www.mannatmicroconcrete.site/logo.png",
-  "description": "Premium artisans for Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces across India.",
+  "description": "Premium artisans providing Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces across the entire country (Pan-India).",
   "@id": "https://www.mannatmicroconcrete.site",
   "url": "https://www.mannatmicroconcrete.site",
   "telephone": "+91-9540490459",
@@ -80,7 +94,10 @@ const jsonLd = {
     { "@type": "City", "name": "New Delhi" },
     { "@type": "City", "name": "Mumbai" },
     { "@type": "City", "name": "Bangalore" },
-    { "@type": "City", "name": "Hyderabad" }
+    { "@type": "City", "name": "Hyderabad" },
+    { "@type": "City", "name": "Ahmedabad" },
+    { "@type": "City", "name": "Pune" },
+    { "@type": "City", "name": "Chennai" }
   ],
   "contactPoint": {
     "@type": "ContactPoint",

@@ -8,6 +8,9 @@ const cities = [
     { name: "Mumbai", slug: "mumbai", code: "BOM", desc: "Serving luxury high-rises and coastal residences." },
     { name: "Bangalore", slug: "bangalore", code: "BLR", desc: "Architectural monolithic projects in the tech hub." },
     { name: "Hyderabad", slug: "hyderabad", code: "HYD", desc: "Premium architectural floorings for the City of Pearls." },
+    { name: "Pune", slug: "pune", code: "PNQ", desc: "Luxury seamless surfaces for the cultural capital." },
+    { name: "Chennai", slug: "chennai", code: "MAA", desc: "Modern architectural finishes for coastal luxury." },
+    { name: "Ahmedabad", slug: "ahmedabad", code: "AMD", desc: "High-end monolithic projects in the textile hub." },
 ];
 
 const LocationsPage = () => {

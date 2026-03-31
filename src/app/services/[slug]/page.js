@@ -50,7 +50,15 @@ export async function generateMetadata({ params }) {
     return {
         title: `${service.title} | Luxury Finishes by Mannat`,
         description: service.desc,
-        keywords: [`${service.title} India`, `Premium ${service.title}`, "Mannat Micro Concrete", "Luxury Interiors Delhi"],
+        keywords: [
+            `${service.title} India`, 
+            `Premium ${service.title} Delhi`, 
+            `${service.title} contractors Mumbai`,
+            "Mannat Micro Concrete", 
+            "Luxury Seamless Surface", 
+            "Architectural Finishes India",
+            "Modern Wall Texture"
+        ],
         openGraph: {
             title: `${service.title} | Mannat Micro Concrete`,
             description: service.desc,
@@ -73,7 +81,7 @@ export default async function Page({ params }) {
             "name": "Mannat Micro Concrete",
             "url": "https://www.mannatmicroconcrete.site"
         },
-        "areaServed": ["New Delhi", "Mumbai", "Bangalore", "Hyderabad"],
+        "areaServed": ["New Delhi", "Mumbai", "Bangalore", "Hyderabad", "Pune", "Chennai", "Ahmedabad"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Luxury Surface Finishes",
