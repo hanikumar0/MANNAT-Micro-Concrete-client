@@ -205,7 +205,7 @@ const NewProjectPage = () => {
                             <label className="aspect-square rounded-xl border-2 border-dashed border-white/10 hover:border-[#d4af37] flex flex-col items-center justify-center cursor-pointer transition-colors text-white/30 hover:text-[#d4af37]">
                                 <Upload size={24} className="mb-2" />
                                 <span className="text-xs font-bold uppercase tracking-widest">Upload</span>
-                                <input type="file" multiple accept="image/*" onChange={handleImageChange} className="hidden" />
+                                <input type="file" multiple accept="image/*,video/*" onChange={handleImageChange} className="hidden" />
                             </label>
                         </div>
                     </div>

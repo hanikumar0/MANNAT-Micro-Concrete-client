@@ -82,7 +82,7 @@ export default function HomeClient() {
             <section className="py-32 px-6 bg-zinc-50 dark:bg-[#050505] transition-colors duration-500 overflow-hidden">
                 <div className="max-w-[1600px] mx-auto">
                     <Reveal width="100%">
-                        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 w-full">
+                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-10 mb-24 w-full text-center md:text-left">
                             <div>
                                 <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.4em]">Our Expertise</span>
                                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black dark:text-white mt-6 uppercase leading-[0.9]">
@@ -90,7 +90,7 @@ export default function HomeClient() {
                                     <span className="text-black/30 dark:text-white/30">Continuity.</span>
                                 </h2>
                             </div>
-                            <Link href="/services" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2">
+                            <Link href="/services" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2 mt-4 md:mt-0">
                                 All Finishes <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
@@ -218,7 +218,7 @@ export default function HomeClient() {
             <section className="py-32 px-6 bg-zinc-50 dark:bg-[#050505] transition-colors duration-500 overflow-hidden">
                 <div className="max-w-[1600px] mx-auto">
                     <Reveal width="100%">
-                        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 w-full">
+                        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-10 mb-24 w-full text-center md:text-left">
                             <div>
                                 <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.4em]">Full Method</span>
                                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black dark:text-white mt-6 uppercase leading-[0.9]">
@@ -226,7 +226,7 @@ export default function HomeClient() {
                                     <span className="text-black/30 dark:text-white/30">Precision.</span>
                                 </h2>
                             </div>
-                            <Link href="/process" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2">
+                            <Link href="/process" className="text-black/40 dark:text-white/40 hover:text-[#d4af37] transition-all text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2 group border-b border-black/5 dark:border-white/10 pb-2 mt-4 md:mt-0">
                                 Full Methodology <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>

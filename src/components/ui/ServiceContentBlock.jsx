@@ -77,16 +77,16 @@ const ServiceContentBlock = ({
                 initial={{ opacity: 0, x: reverse ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="w-full lg:w-1/2"
+                className="w-full lg:w-1/2 text-center lg:text-left"
             >
                 <span className="text-[10px] uppercase font-black tracking-[0.4em] text-black/30 dark:text-white/30 block mb-4">
                     {subtitle}
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold tracking-tighter uppercase text-black dark:text-white mb-8">
-                    {title} <span className="text-[#d4af37] underline decoration-4 underline-offset-[12px] decoration-[#d4af37]/30">?</span>
+                    {title} <span className="hidden lg:inline text-[#d4af37] underline decoration-4 underline-offset-[12px] decoration-[#d4af37]/30">?</span>
                 </h2>
                 
-                <div className="space-y-6 text-black/60 dark:text-white/50 text-sm md:text-base leading-relaxed font-light">
+                <div className="space-y-6 text-black/60 dark:text-white/50 text-sm md:text-base leading-relaxed font-light mx-auto lg:mx-0">
                     {content.map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                     ))}

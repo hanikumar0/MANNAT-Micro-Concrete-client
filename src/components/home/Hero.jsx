@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className="relative h-screen w-full flex items-center overflow-hidden bg-black">
+        <section className="relative min-h-[100dvh] w-full flex items-center pt-24 pb-12 overflow-hidden bg-black">
             {/* Background Overlay */}
             <div className="absolute inset-0 bg-white/10 z-10" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent z-10" />
@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-20 w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col justify-center h-full pt-20">
+            <div className="relative z-20 w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col items-center md:items-start justify-center h-full pt-10 text-center md:text-left">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -35,13 +35,13 @@ const Hero = () => {
                         initial={{ opacity: 0, letterSpacing: "0.2em" }}
                         animate={{ opacity: 1, letterSpacing: "0.4em" }}
                         transition={{ duration: 2, delay: 0.5 }}
-                        className="flex items-center gap-4 text-[#d4af37] uppercase text-[10px] font-black mb-10"
+                        className="flex items-center justify-center md:justify-start gap-4 text-[#d4af37] uppercase text-[10px] font-black mb-10"
                     >
-                        <div className="w-12 h-[1px] bg-[#d4af37]" />
+                        <div className="hidden md:block w-12 h-[1px] bg-[#d4af37]" />
                         EST. 2024 — NEW DELHI
                     </motion.div>
 
-                    <h1 className="text-4xl md:text-7xl font-light tracking-tight text-black mb-10 leading-[1.1] uppercase">
+                    <h1 className="text-4xl md:text-7xl font-light tracking-tight text-black mb-6 md:mb-10 leading-[1.1] uppercase text-center md:text-left">
                         <span className="block font-medium italic serif tracking-wider opacity-100 mb-2">Mannat</span>
                         <span className="text-black/60 font-light">Micro Concrete.</span>
                     </h1>
@@ -50,7 +50,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.8 }}
-                        className="text-lg md:text-xl text-black/50 font-light max-w-xl mb-14 leading-relaxed lg:mx-0"
+                        className="text-lg md:text-xl text-black/50 font-light max-w-xl mx-auto md:mx-0 mb-10 md:mb-14 leading-relaxed text-center md:text-left"
                     >
                         Pioneers in <span className="text-black/80">Seamless Surfaces</span> and <span className="text-black/80">Premium Microcement</span>. Elevating architectural spaces across India with artisanal precision and joint-free continuity.
                     </motion.p>
