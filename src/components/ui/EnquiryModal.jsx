@@ -131,7 +131,7 @@ const EnquiryModal = () => {
                     >
                         <button
                             onClick={handleClose}
-                            className="absolute top-6 right-6 z-10 w-10 h-10 bg-black/5 dark:bg-white/5 hover:bg-[#d4af37] hover:text-black rounded-full flex items-center justify-center transition-all group"
+                            className="absolute top-4 right-4 md:top-6 md:right-6 z-[60] w-12 h-12 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-[#d4af37] hover:text-white dark:hover:text-white rounded-full flex items-center justify-center transition-all shadow-md group border border-gray-300 dark:border-gray-700"
                         >
                             <X size={20} className="group-hover:rotate-90 transition-transform duration-300" />
                         </button>

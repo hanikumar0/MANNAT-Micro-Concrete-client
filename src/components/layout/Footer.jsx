@@ -123,7 +123,7 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-10 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row gap-8 justify-between items-center text-[10px] text-black/20 dark:text-white/20 uppercase tracking-[0.3em] font-bold text-center">
-                    <p>© 2024 Mannat Micro Concrete. Artisanal Seamless Excellence.</p>
+                    <p>© {new Date().getFullYear()} Mannat Micro Concrete. Artisanal Seamless Excellence.</p>
                     <div className="flex flex-wrap justify-center gap-8">
                         <Link href="/privacy-policy" className="hover:text-black dark:hover:text-white transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</Link>

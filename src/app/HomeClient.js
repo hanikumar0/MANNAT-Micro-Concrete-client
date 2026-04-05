@@ -69,6 +69,27 @@ const businessSchema = {
     }
 };
 
+const servicesRowOne = [
+    { title: 'Microcement Flooring', desc: 'Monolithic seamless floors for high-traffic zones.', image: '/images/bright_floor.png', slug: 'microcement-flooring' },
+    { title: 'Microcement Walls', desc: 'Sculptural, joint-free walls with artistic textures.', image: '/images/bright_walls.png', slug: 'microcement-walls' },
+    { title: 'Venetian Lime Plaster', desc: 'Classic Italian marble-like depth and high sheen.', image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8', slug: 'venetian-plaster' },
+    { title: 'Epoxy Coatings', desc: 'Industrial strength meets architectural aesthetics.', image: '/images/epoxy_metallic.png', slug: 'epoxy-coatings' },
+];
+
+const servicesRowTwo = [
+    { title: 'Lime Wash', desc: 'Breathable, mineral-based matte finishes.', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c', slug: 'lime-wash' },
+    { title: 'Luxury Wetrooms', desc: 'Joint-free waterproof bathroom solutions.', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14', slug: 'luxury-wetrooms' },
+    { title: 'Bespoke Furniture', desc: 'Seamlessly coated tables and counters.', image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea', slug: 'bespoke-furniture' },
+];
+
+const processSteps = [
+    { step: '01', title: 'Consultation', desc: 'Vision alignment & site analysis.' },
+    { step: '02', title: 'Sampling', desc: 'Bespoke texture & color selection.' },
+    { step: '03', title: 'Preparation', desc: 'Substrate treatment & reinforcement.' },
+    { step: '04', title: 'Application', desc: 'Layered artisanal installation.' },
+    { step: '05', title: 'Sealing', desc: 'Protective finishing & handover.' },
+];
+
 export default function HomeClient() {
 
     return (
@@ -98,12 +119,7 @@ export default function HomeClient() {
                     </Reveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { title: 'Microcement Flooring', desc: 'Monolithic seamless floors for high-traffic zones.', image: '/images/bright_floor.png', slug: 'microcement-flooring' },
-                            { title: 'Microcement Walls', desc: 'Sculptural, joint-free walls with artistic textures.', image: '/images/bright_walls.png', slug: 'microcement-walls' },
-                            { title: 'Venetian Lime Plaster', desc: 'Classic Italian marble-like depth and high sheen.', image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8', slug: 'venetian-plaster' },
-                            { title: 'Epoxy Coatings', desc: 'Industrial strength meets architectural aesthetics.', image: '/images/epoxy_metallic.png', slug: 'epoxy-coatings' },
-                        ].map((service, i) => (
+                        {servicesRowOne.map((service, i) => (
                             <Link key={i} href={`/services/${service.slug}`} className="block group">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
@@ -131,11 +147,7 @@ export default function HomeClient() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                        {[
-                            { title: 'Lime Wash', desc: 'Breathable, mineral-based matte finishes.', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c', slug: 'lime-wash' },
-                            { title: 'Luxury Wetrooms', desc: 'Joint-free waterproof bathroom solutions.', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14', slug: 'luxury-wetrooms' },
-                            { title: 'Bespoke Furniture', desc: 'Seamlessly coated tables and counters.', image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea', slug: 'bespoke-furniture' },
-                        ].map((service, i) => (
+                        {servicesRowTwo.map((service, i) => (
                             <Link key={i} href={`/services/${service.slug}`} className="block group">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
@@ -234,13 +246,7 @@ export default function HomeClient() {
                     </Reveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                        {[
-                            { step: '01', title: 'Consultation', desc: 'Vision alignment & site analysis.' },
-                            { step: '02', title: 'Sampling', desc: 'Bespoke texture & color selection.' },
-                            { step: '03', title: 'Preparation', desc: 'Substrate treatment & reinforcement.' },
-                            { step: '04', title: 'Application', desc: 'Layered artisanal installation.' },
-                            { step: '05', title: 'Sealing', desc: 'Protective finishing & handover.' },
-                        ].map((item, i) => (
+                        {processSteps.map((item, i) => (
                             <Reveal key={i} delay={i * 0.1}>
                                 <div className="group cursor-default p-6 bg-white rounded-2xl border border-black/5 shadow-md">
                                     <span className="text-5xl font-black text-black/5 transition-colors duration-700 group-hover:text-[#d4af37]/20">{item.step}</span>

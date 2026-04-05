@@ -14,7 +14,7 @@ const StickyActions = () => {
     ];
 
     return (
-        <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] flex flex-col items-end gap-3 md:gap-4">
+        <div className="fixed bottom-24 right-6 md:bottom-28 md:right-10 z-[100] flex flex-col items-end gap-3 md:gap-4">
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
