@@ -128,6 +128,7 @@ const Footer = () => {
                         <Link href="/privacy-policy" className="hover:text-black dark:hover:text-white transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</Link>
                         <Link href="/warranty" className="hover:text-black dark:hover:text-white transition-colors">Warranty & Guarantee</Link>
+                        <Link href="/admin" className="hover:text-black dark:hover:text-white transition-colors opacity-50 hover:opacity-100">Admin Portal</Link>
                         <button 
                             onClick={() => window.dispatchEvent(new Event('openCookieBanner'))}
                             className="hover:text-black dark:hover:text-white transition-colors uppercase cursor-pointer"
