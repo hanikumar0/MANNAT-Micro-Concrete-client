@@ -154,6 +154,23 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','${gtmId}');`,
           }}
         />
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        />
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+            `,
+          }}
+        />
         <script
           id="json-ld"
           type="application/ld+json"

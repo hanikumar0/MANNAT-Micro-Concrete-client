@@ -60,6 +60,13 @@ export const TrackingProvider = ({ children }) => {
             })
         });
 
+        // GA4 Page View
+        if (window.gtag) {
+            window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+                page_path: pathname,
+            });
+        }
+
     }, [pathname]);
 
     const trackInteraction = (type, metadata = {}) => {
@@ -82,6 +89,14 @@ export const TrackingProvider = ({ children }) => {
         if (typeof window !== 'undefined' && window.dataLayer) {
             window.dataLayer.push({
                 event: type,
+                page_path: window.location.pathname,
+                ...metadata
+            });
+        }
+
+        // Push to GA4
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', type, {
                 page_path: window.location.pathname,
                 ...metadata
             });
