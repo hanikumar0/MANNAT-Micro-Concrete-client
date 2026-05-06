@@ -7,18 +7,15 @@ import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const projects = [
-    { title: 'The Minimalist Villa', category: 'Flooring', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c', slug: 'minimalist-villa' },
-    { title: 'Modern Loft Walls', category: 'Walls', image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8', slug: 'modern-loft' },
-    { title: 'Artisanal Wetroom', category: 'Bathrooms', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14', slug: 'artisanal-wetroom' },
-    { title: 'Commercial Gallery', category: 'Flooring', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750', slug: 'commercial-gallery' },
-    { title: 'Sculptural Staircase', category: 'Walls', image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea', slug: 'sculptural-staircase' },
-    { title: 'Industrial Kitchen', category: 'Epoxy', image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d', slug: 'industrial-kitchen' },
-    { title: 'Venetian Terrazzo', category: 'Terrazzo', image: 'https://plus.unsplash.com/premium_photo-1678447323507-aeae3b4ee525', slug: 'venetian-terrazzo' },
-    { title: 'Luxury Plaster Residence', category: 'Plaster', image: 'https://images.unsplash.com/photo-1621293954908-907159247fc8', slug: 'luxury-plaster-residence' },
-    { title: 'Minimalist Boutique Plaster', category: 'Plaster', image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8', slug: 'minimalist-boutique-plaster' },
+    { title: 'Crimson High-Gloss Showroom', category: 'Flooring', image: 'https://lh3.googleusercontent.com/d/1JearKLXrwn_0IwTnBkUpl-Y9ZM_juSl5', slug: 'crimson-showroom' },
+    { title: 'Artisanal Feature Wall', category: 'Walls', image: 'https://lh3.googleusercontent.com/d/1voNGKWaMjg2Kl-_2Z7BeLbL7VKmJZIW_', slug: 'artisanal-wall' },
+    { title: 'Luxe Residential Lobby', category: 'Flooring', image: 'https://lh3.googleusercontent.com/d/1-22ruUh-fVIt0Es7oSsQHiZhwuztjmpW', slug: 'luxe-lobby' },
+    { title: 'Industrial Studio Floor', category: 'Flooring', image: 'https://lh3.googleusercontent.com/d/131zuXpqy7nLanFDJwgXYfl2QSjhXNKgw', slug: 'industrial-studio' },
+    { title: 'Minimalist Wall Art', category: 'Walls', image: 'https://lh3.googleusercontent.com/d/1zIg0gOncaZ1xnrHPO_v4iJhE9oTkCZoh', slug: 'minimalist-wall' },
+    { title: 'Monolithic Ceiling Design', category: 'Architecture', image: 'https://lh3.googleusercontent.com/d/11OO8_pFDngbJm6IZGtmYRdiKvjJ8NEJC', slug: 'monolithic-ceiling' },
 ];
 
-const categories = ['Flooring', 'Walls', 'Bathrooms', 'Terrazzo', 'Epoxy', 'Plaster'];
+const categories = ['Flooring', 'Walls', 'Architecture'];
 
 const PortfolioPreview = () => {
     const [activeFilter, setActiveFilter] = React.useState('All');
@@ -72,7 +69,7 @@ const PortfolioPreview = () => {
                                 className="group relative aspect-[4/5] overflow-hidden rounded-[3rem] border border-black/5 dark:border-white/5"
                             >
                                 <Image
-                                    src={`${project.image}?auto=format&fit=crop&q=80&w=800`}
+                                    src={project.image}
                                     alt={project.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

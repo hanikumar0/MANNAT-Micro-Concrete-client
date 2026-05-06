@@ -5,7 +5,10 @@ import Image from 'next/image';
 import { Maximize2, X, MapPin } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 
-const projects = [
+// Helper function to ensure high-performance loading without broken links
+const getDirectDriveUrl = (id) => `https://lh3.googleusercontent.com/d/${id}`;
+
+const existingProjects = [
     {
         id: 1,
         title: "The Minimalist Loft",
@@ -56,11 +59,38 @@ const projects = [
     }
 ];
 
+const newProjectImages = [
+    { id: 7, title: "Crimson High-Gloss Showroom", location: "Okhla, New Delhi", category: "Flooring", finish: "Metallic Red Epoxy", src: getDirectDriveUrl("1JearKLXrwn_0IwTnBkUpl-Y9ZM_juSl5") },
+    { id: 8, title: "Luxe Residential Lobby", location: "Worli, Mumbai", category: "Flooring", finish: "Cream Gloss Microcement", src: getDirectDriveUrl("1-22ruUh-fVIt0Es7oSsQHiZhwuztjmpW") },
+    { id: 9, title: "Artisanal Feature Wall", location: "Gurgaon", category: "Wall", finish: "Textured Slate Grey Plaster", src: getDirectDriveUrl("1voNGKWaMjg2Kl-_2Z7BeLbL7VKmJZIW_") },
+    { id: 10, title: "Industrial Studio Floor", location: "Noida", category: "Flooring", finish: "Grey Industrial Microcement", src: getDirectDriveUrl("131zuXpqy7nLanFDJwgXYfl2QSjhXNKgw") },
+    { id: 11, title: "Minimalist Wall Art", location: "South Delhi", category: "Wall", finish: "Smooth Ivory Plaster", src: getDirectDriveUrl("1zIg0gOncaZ1xnrHPO_v4iJhE9oTkCZoh") },
+    { id: 12, title: "Monolithic Ceiling Design", location: "Bangalore", category: "Ceiling", finish: "Seamless Concrete Ceiling", src: getDirectDriveUrl("11OO8_pFDngbJm6IZGtmYRdiKvjJ8NEJC") },
+    { id: 13, title: "Bespoke Office Desk", location: "Cyber Hub", category: "Reception", finish: "Coated Executive Desk", src: getDirectDriveUrl("1tOneG9mocNU90W6YDBiyaLpay-96zlme") },
+    { id: 14, title: "Luxury Reception Counter", location: "Mumbai, BKC", category: "Reception", finish: "Glossy Microcement Counter", src: getDirectDriveUrl("1wkY7TrwMt6a0SOBm3kHVIRTF2TiSWmMd") },
+    { id: 15, title: "Premium Surface Continuity", location: "Delhi", category: "Flooring", finish: "Total Surface Overlay", src: getDirectDriveUrl("1XnFZIwf_bPUth0wIvgXnHAWGK2iX_L8l") },
+    { id: 16, title: "Decorative Wall Coating", location: "Pune", category: "Wall", finish: "Stucco Veneziano Wall", src: getDirectDriveUrl("1LyT9vyKY2QnQzuevdDY5oU0kqtKLMrSu") },
+    { id: 17, title: "Modern Apartment Floor", location: "Hyderabad", category: "Flooring", finish: "Silver Grey Microcement", src: getDirectDriveUrl("1umWGSv0ae_lcVp2TxJnJefAA1JVxagsU") },
+    { id: 18, title: "Polished Concrete Aesthetic", location: "Chennai", category: "Wall", finish: "High-Sheen Concrete Wall", src: getDirectDriveUrl("1B8mjkyIHDY4vlZQ9tb0gIzNcGRIKC91J") },
+    { id: 19, title: "Commercial Continuity", location: "Ahmedabad", category: "Flooring", finish: "Monolithic Shop Floor", src: getDirectDriveUrl("1hx98kSBT8vItis_WWGCeCzF6mqoJm8O9") },
+    { id: 20, title: "Minimalist Verticality", location: "Chandigarh", category: "Wall", finish: "Limewash Wall Finish", src: getDirectDriveUrl("1lACapXgpBVRHGVZCsBqLDDJRtzgICPYh") }
+];
+
+// Merge logic ensuring no duplicates and appending only
+const projects = [...existingProjects, ...newProjectImages.map(img => ({
+    id: img.id,
+    title: img.title,
+    location: img.location,
+    category: img.category,
+    finish: img.finish,
+    image: img.src
+}))];
+
 const ProjectsGallery = () => {
     const [selectedId, setSelectedId] = useState(null);
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const categories = ["All", "Residential", "Commercial", "Architecture"];
+    const categories = ["All", "Wall", "Flooring", "Ceiling", "Reception", "Residential", "Commercial", "Architecture"];
     const filteredProjects = activeCategory === "All"
         ? projects
         : projects.filter(p => p.category === activeCategory);
@@ -114,11 +144,12 @@ const ProjectsGallery = () => {
                             >
                                 <div className="relative aspect-[3/4] rounded-[4rem] overflow-hidden border border-black/5 dark:border-white/5 shadow-2xl mb-10 transition-transform duration-700 group-hover:-translate-y-2">
                                     <Image
-                                        src={`${project.image}?auto=format&fit=crop&q=70&w=1000`}
-                                        alt={`${project.title} - ${project.finish} in ${project.location} by Mannat Micro Concrete`}
+                                        src={`${project.image}${project.image.includes('unsplash') ? '?auto=format&fit=crop&q=70&w=1000' : ''}`}
+                                        alt={`${project.title} - ${project.finish} by Mannat Micro Concrete`}
                                         fill
                                         className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s] ease-out"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
                                         <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 flex items-center justify-center text-white scale-50 group-hover:scale-100 transition-all duration-700">
@@ -135,7 +166,7 @@ const ProjectsGallery = () => {
                                     <div className="flex items-center gap-3 text-[#d4af37] text-[9px] font-black uppercase tracking-[.4em] mb-4">
                                         <div className="w-8 h-px bg-[#d4af37]/30" /> {project.location}
                                     </div>
-                                    <h3 className="text-3xl font-bold uppercase tracking-tighter group-hover:text-[#d4af37] transition-colors duration-500">{project.title}</h3>
+                                    <h3 className="text-3xl font-bold uppercase tracking-tighter group-hover:text-[#d4af37] transition-colors duration-500 leading-tight">{project.title}</h3>
                                     <p className="text-[10px] text-black/30 dark:text-white/30 uppercase tracking-[.4em] mt-3 font-bold">{project.finish}</p>
                                 </div>
                             </motion.div>
@@ -162,7 +193,7 @@ const ProjectsGallery = () => {
                             className="relative w-full max-w-6xl h-[70vh] md:aspect-[16/10] bg-zinc-900 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-white/10"
                         >
                             <Image
-                                src={`${selectedProject.image}?auto=format&fit=crop&q=80&w=1600`}
+                                src={`${selectedProject.image}${selectedProject.image.includes('unsplash') ? '?auto=format&fit=crop&q=80&w=1600' : ''}`}
                                 alt={selectedProject.title}
                                 fill
                                 className="object-cover"

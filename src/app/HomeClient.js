@@ -16,6 +16,7 @@ const ColorPaletteTool = dynamic(() => import('@/components/ui/ColorPaletteTool'
 const FAQSection = dynamic(() => import('@/components/ui/FAQSection'));
 const CTABand = dynamic(() => import('@/components/home/CTABand'));
 const InstagramReels = dynamic(() => import('@/components/ui/InstagramReels'));
+const InspirationGallery = dynamic(() => import('@/components/home/InspirationGallery'));
 const ServiceContentBlock = dynamic(() => import('@/components/ui/ServiceContentBlock'));
 
 const homeFAQs = [
@@ -211,6 +212,9 @@ export default function HomeClient() {
 
             {/* Section 3: Featured Real Projects */}
             <ProjectsGallery />
+
+            {/* Section: Visual Inspiration Gallery (New Drive Images) */}
+            <InspirationGallery />
 
             {/* Section: Social Media Showcase */}
             <InstagramReels />
